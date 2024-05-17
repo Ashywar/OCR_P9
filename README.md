@@ -4,7 +4,7 @@
 Beta version of a website made with Django. Allows you to post reviews to respond to the reviews of other user, to post your own review and to follow users and their posts.
 <br>
 
-## REQUISITORIES 
+## Requirements 
 Python3<br>
 Django3<br>
 Flake8-html<br>
@@ -16,7 +16,7 @@ git clone https://github.com/Ashywar/OCR_P9
 ```
 Start access the project folder
 
-## for Windows
+## For Windows
 Create a virtual environment
 ```
 python -m venv env
@@ -27,7 +27,7 @@ cd env/scripts
 source activate
 ```
 
-## for Linux or macOS
+## For Linux or macOS
 Create a virtual environment 
 ```
 python3 -m venv env
