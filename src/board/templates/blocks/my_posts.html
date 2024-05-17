@@ -1,0 +1,7 @@
+{% for post in posts %}
+{% if post.content_type == 'TICKET' %}
+{% include 'blocks\my_ticket.html' %}
+{% elif post.content_type == 'REVIEW' %}
+{% include 'blocks\my_review.html' %}
+{%endif%}
+{% endfor %}
