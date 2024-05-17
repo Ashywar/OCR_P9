@@ -1,4 +1,4 @@
-<h2 align="center">DJANGO Project -  LIT REVIEW  -  OpenClassRooms Project 09 </h2><br>
+<h1 align="center">LIT REVIEW  -  OpenClassRooms Project 09 </h1><br>
 
 ## Overview
 Beta version of a website made with Django. Allows you to post reviews to respond to the reviews of other user, to post your own review and to follow users and their posts.
