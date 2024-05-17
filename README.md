@@ -1,6 +1,6 @@
 <h2 align="center">DJANGO Project -  LIT REVIEW  -  OpenClassRooms Project 09 </h2><br>
 
-## OVERVIEW
+## Overview
 Beta version of a website made with Django. Allows you to post reviews to respond to the reviews of other user, to post your own review and to follow users and their posts.
 <br>
 
@@ -9,7 +9,7 @@ Python3<br>
 Django3<br>
 Flake8-html<br>
 
-## INSTALLATION
+## Installation
 Start by closing the repository :
 ```
 git clone https://github.com/Ashywar/OCR_P9
@@ -51,7 +51,7 @@ You will be asked to select a username, provide an email address, and choose and
 python manage.py createsuperuser
 ```
 
-## LAUNCH 
+## Launch the application 
 
 Run the program
 ```
