@@ -14,6 +14,7 @@
             <div class="header">
                 {% include 'blocks/header.html' %}
             </div>
+            <hr>
             <h3>Request a review</h3>
             <form class="form" method="POST" action="{% url 'request' %}" enctype="multipart/form-data">
                 {% csrf_token %}

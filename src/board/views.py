@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from board.forms import  UserSearchForm
+from board.forms import UserSearchForm
 from reviews.models import Ticket, Review
 from django.db.models import CharField, Value
 from itertools import chain
@@ -17,13 +17,11 @@ def main_board(request):
     tickets = tickets.annotate(content_type=Value("TICKET", CharField()))
 
     posts = sorted(
-        chain(reviews, tickets),
-        key=lambda post: post.time_created, reverse=True
+        chain(reviews, tickets), key=lambda post: post.time_created, reverse=True
     )
     follows = FollowersCount.objects.filter(user=request.user)
 
-    return render(request, "flux.html",
-                  context={"posts": posts, "follows": follows})
+    return render(request, "flux.html", context={"posts": posts, "follows": follows})
 
 
 @login_required
@@ -35,8 +33,7 @@ def posts_page(request):
     tickets = tickets.annotate(content_type=Value("TICKET", CharField()))
 
     posts = sorted(
-        chain(reviews, tickets),
-        key=lambda post: post.time_created, reverse=True
+        chain(reviews, tickets), key=lambda post: post.time_created, reverse=True
     )
     return render(request, "posts.html", context={"posts": posts})
 
@@ -49,7 +46,7 @@ def subscription_page(request):
     if request.method == "POST":
         form = UserSearchForm(request.POST)
         if form.is_valid():
-            search_query = form.cleaned_data.get('search_query')
+            search_query = form.cleaned_data.get("search_query")
             followed_user = User.objects.get(username=search_query)
             if followed_user != request.user:
                 try:
@@ -65,8 +62,12 @@ def subscription_page(request):
     return render(
         request,
         "subscription.html",
-        context={"followform": followform, "follows": follows,
-                 "followers": followers, "users": users,},
+        context={
+            "followform": followform,
+            "follows": follows,
+            "followers": followers,
+            "users": users,
+        },
     )
 
 
